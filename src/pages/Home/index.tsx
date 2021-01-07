@@ -1,14 +1,38 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { resquestAllIncidents } from '../../actions';
 import MasterPage from '../../components/MasterPage';
-import Button from '../../components/Button';
+import ResultList from '../../components/ResultList';
 
-function Home() {
+export default function Home(props: object) {
+  const { CancelToken } = axios;
+  const source = CancelToken.source();
+
+  const [allIncidents, setIncidents] = useState([]);
+
+  const getAllIncidents = async () => {
+    try {
+      const { incidents } = await resquestAllIncidents(props);
+      setIncidents(incidents);
+    } catch (error) {
+      if (!axios.isCancel(error)) {
+        // eslint-disable-next-line no-console
+        console.log('Cancel loading...');
+      }
+    }
+  };
+
+  useEffect(() => {
+    getAllIncidents();
+
+    return () => {
+      source.cancel('Operation canceled by the user.');
+    };
+  }, []);
+
   return (
     <MasterPage>
-      <Button href="/404">
-        Click Here
-      </Button>
+      <ResultList list={allIncidents} />
     </MasterPage>
   );
 }
-
-export default Home;

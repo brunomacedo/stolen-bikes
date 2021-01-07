@@ -1,6 +1,7 @@
 import {
-  Switch, BrowserRouter, Route, Redirect,
+  Switch, BrowserRouter, Route,
 } from 'react-router-dom';
+import PageNotFound from '../pages/404';
 import Routes from './routers';
 
 const Routers = () => (
@@ -20,7 +21,7 @@ const Routers = () => (
           );
         })}
 
-      <Redirect to="/404" />
+      <Route component={PageNotFound} />
     </Switch>
   </BrowserRouter>
 );

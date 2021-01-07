@@ -10,14 +10,17 @@
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
+    "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
+    "axios": "^0.21.1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "moment": "^2.29.1",
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-lazy-load-image-component": "^1.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "ssl-express-www": "^3.0.7",
@@ -26,6 +29,7 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@types/react-lazy-load-image-component": "^1.5.1",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
     "conventional-changelog-cli": "^2.1.1",
@@ -75,6 +79,7 @@
       "jsx-a11y"
     ],
     "rules": {
+      "camelcase": "off",
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
       "react/jsx-filename-extension": [
