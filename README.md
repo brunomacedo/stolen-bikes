@@ -53,6 +53,7 @@
 ```bash
 FAST_REFRESH=false
 PORT=3001
+REACT_APP_BIKE_API=https://bikewise.org/api/v2
 ```
 
 ### Install packages dependencies
