@@ -1,5 +1,5 @@
 export const screen = {
-  xs: '425px',
+  xs: '472px',
   sm: '768px',
   md: '991px',
   lg: '1200px',
@@ -13,4 +13,5 @@ export const colors = {
   darkGrey: '#797979',
   red: '#D21C10',
   blue: '#1765b5',
+  xanadu: '#7D8570',
 };

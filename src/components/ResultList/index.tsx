@@ -2,11 +2,15 @@ import { IntIncident } from '../../interfaces/incident';
 import CardResult from '../CardResult';
 
 export default function ResultList({ list }: any) {
+  if (list.length === 0) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
-      {list.length > 0 ? (
-        <ul>
-          {list.map((item: IntIncident) => (
+      <ul>
+        {list.map((item: IntIncident) => (
+          item && (
             <CardResult
               id={item.id}
               title={item.title}
@@ -17,11 +21,9 @@ export default function ResultList({ list }: any) {
               media={item.media}
               type={item.type}
             />
-          ))}
-        </ul>
-      ) : (
-        <p>Loading...</p>
-      )}
+          )
+        ))}
+      </ul>
     </>
   );
 }
