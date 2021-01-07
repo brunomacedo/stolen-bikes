@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import axios from 'axios';
 import { resquestAllIncidents } from '../../actions';
 import MasterPage from '../../components/MasterPage';
 import bicycleImage from '../../assets/images/bicycle.svg';
@@ -21,16 +22,30 @@ interface PropsMedia {
 }
 
 export default function Home(props: object) {
+  const { CancelToken } = axios;
+  const source = CancelToken.source();
+
   const [allIncidents, setIncidents] = useState([]);
+
+  const getAllIncidents = async () => {
+    try {
+      const { incidents } = await resquestAllIncidents(props);
+      setIncidents(incidents);
+    } catch (error) {
+      if (!axios.isCancel(error)) {
+        // eslint-disable-next-line no-console
+        console.log('Cancel loading...');
+      }
+    }
+  };
 
   useEffect(() => {
     getAllIncidents();
-  }, []);
 
-  const getAllIncidents = async () => {
-    const { incidents } = await resquestAllIncidents(props);
-    setIncidents(incidents);
-  };
+    return () => {
+      source.cancel('Operation canceled by the user.');
+    };
+  }, []);
 
   return (
     <MasterPage>
