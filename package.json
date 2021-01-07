@@ -15,6 +15,7 @@
     "@types/styled-components": "^5.1.7",
     "compression": "^1.7.4",
     "express": "^4.17.1",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -34,7 +35,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "node ./index.js",
+    "start": "node .",
     "build": "react-scripts build && gzipper c --verbose ./build",
     "test": "react-scripts test",
     "heroku-postbuild": "npm run build",
