@@ -27,11 +27,15 @@ export default function Home(props: object) {
 
   return (
     <MasterPage>
-      <ul>
-        {allIncidents.map((item: PropsIncidents) => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
+      {allIncidents.length > 0 ? (
+        <ul>
+          {allIncidents.map((item: PropsIncidents) => (
+            <li key={item.id}>{item.title}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>Loading...</p>
+      )}
     </MasterPage>
   );
 }
