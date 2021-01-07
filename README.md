@@ -45,6 +45,12 @@
 
 ## **Inital setup**
 
+### Create `.env` file
+
+```bash
+FAST_REFRESH=false
+```
+
 ### Install packages dependencies
 
 Run the command below from this root path
