@@ -22,7 +22,7 @@
   <a href="#deploy">
     <img src="https://img.shields.io/badge/-deploy-green" />
   </a>
-  <a href="#" target="_blank">
+  <a href="CHANGELOG.md" target="_blank">
     <img src="https://img.shields.io/badge/-changelog-grey" />
   </a>
 </p>
