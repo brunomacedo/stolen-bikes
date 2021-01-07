@@ -1,14 +1,37 @@
+import { useEffect, useState } from 'react';
+import { resquestAllIncidents } from '../../actions';
 import MasterPage from '../../components/MasterPage';
-import Button from '../../components/Button';
 
-function Home() {
+interface PropsIncidents {
+  id: string;
+  title: string;
+  description: string;
+  address: string;
+  url: string;
+  source: string;
+  media: string;
+  type: string;
+}
+
+export default function Home(props: object) {
+  const [allIncidents, setIncidents] = useState([]);
+
+  useEffect(() => {
+    getAllIncidents();
+  }, []);
+
+  const getAllIncidents = async () => {
+    const { incidents } = await resquestAllIncidents(props);
+    setIncidents(incidents);
+  };
+
   return (
     <MasterPage>
-      <Button href="/404">
-        Click Here
-      </Button>
+      <ul>
+        {allIncidents.map((item: PropsIncidents) => (
+          <li key={item.id}>{item.title}</li>
+        ))}
+      </ul>
     </MasterPage>
   );
 }
-
-export default Home;
