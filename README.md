@@ -49,6 +49,7 @@
 
 ```bash
 FAST_REFRESH=false
+PORT=3001
 ```
 
 ### Install packages dependencies
