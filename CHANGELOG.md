@@ -1,3 +1,17 @@
+# [0.2.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.1.1...v0.2.0) (2021-01-07)
+
+
+### Features
+
+* add bike api url ([2b25d9e](https://github.com/brunomacedo/stolen-bikes/commit/2b25d9e493503d4af604dd8b890505fcaa6f9cce))
+* **masterpage:** include header ([8e683b9](https://github.com/brunomacedo/stolen-bikes/commit/8e683b97764359036f45af364fe354c05091b5e7))
+* add berliner polizei svg logo ([7bf6d00](https://github.com/brunomacedo/stolen-bikes/commit/7bf6d00d623450154bea0a08693ed10184c625ff))
+* add title on index ([76ce586](https://github.com/brunomacedo/stolen-bikes/commit/76ce5867797ce48e80ff670be028985371eb5d59))
+* create express server to heroku ([ce1cfa8](https://github.com/brunomacedo/stolen-bikes/commit/ce1cfa83bd66c1bb62133702eb6e8848b5a2e206))
+* create header component ([d6c0522](https://github.com/brunomacedo/stolen-bikes/commit/d6c05228179e218d19269a7d2ebb6318a6fef2f6))
+
+
+
 ## [0.1.1](https://github.com/brunomacedo/stolen-bikes/compare/v0.1.0...v0.1.1) (2021-01-07)
 
 
