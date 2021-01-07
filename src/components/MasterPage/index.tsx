@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import GlobalStyles from '../../styles/global';
+import Header from '../Header';
 import * as S from './styled';
 
 interface Props {
@@ -8,12 +9,15 @@ interface Props {
 
 function MasterPage({ children }: Props) {
   return (
-    <S.MasterPageWrapper>
+    <>
       <GlobalStyles />
-      <S.MasterPageMain>
-        {children}
-      </S.MasterPageMain>
-    </S.MasterPageWrapper>
+      <Header />
+      <S.Wrapper>
+        <S.Container>
+          {children}
+        </S.Container>
+      </S.Wrapper>
+    </>
   );
 }
 
