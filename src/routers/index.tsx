@@ -1,11 +1,12 @@
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
-import PageNotFound from '../pages/404';
-import routersList from './routers';
+import {
+  Switch, BrowserRouter, Route, Redirect,
+} from 'react-router-dom';
+import Routes from './routers';
 
 const Routers = () => (
   <BrowserRouter>
     <Switch>
-      {routersList
+      {Routes
         .filter((route) => route.active)
         .map((item, index) => {
           const key = `${index}-item`;
@@ -19,7 +20,7 @@ const Routers = () => (
           );
         })}
 
-      <Route component={() => <PageNotFound />} />
+      <Redirect to="/404" />
     </Switch>
   </BrowserRouter>
 );
