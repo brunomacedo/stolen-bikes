@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Stolen bikes
+# Stolen Bike Index
 
 <p align="center">
   <a href="#" target="_blank">
