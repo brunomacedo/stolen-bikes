@@ -1,3 +1,22 @@
+# [0.3.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.2.0...v0.3.0) (2021-01-07)
+
+
+### Bug Fixes
+
+* react dom types ([883f3f6](https://github.com/brunomacedo/stolen-bikes/commit/883f3f66f5e615715308d84961ed210f1a899af6))
+* **server:** express build folder ([5a6c202](https://github.com/brunomacedo/stolen-bikes/commit/5a6c2025890cfbc6b676161f3000b7d4b1b36e44))
+
+
+### Features
+
+* create card component ([4ae9431](https://github.com/brunomacedo/stolen-bikes/commit/4ae943118ce63e9fac6472fc192de354522b8bef))
+* list incidents items ([90edecd](https://github.com/brunomacedo/stolen-bikes/commit/90edecd7f27fa82e702f87a8db8933108cafb2a1))
+* using lazyload ([fb9ff4c](https://github.com/brunomacedo/stolen-bikes/commit/fb9ff4ce5e8cb793d7a1f3900f56a2f7eeb3ce0f))
+* **home:** list all incidents ([d981264](https://github.com/brunomacedo/stolen-bikes/commit/d9812644da8086ad0021f7e6a5743f5473c9322a))
+* create request api to incidents ([6752921](https://github.com/brunomacedo/stolen-bikes/commit/6752921665978d622e438f23cab9ab3c7c5a01de))
+
+
+
 # [0.2.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.1.1...v0.2.0) (2021-01-07)
 
 
