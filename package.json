@@ -19,6 +19,7 @@
     "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-lazy-load-image-component": "^1.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "ssl-express-www": "^3.0.7",
@@ -27,6 +28,7 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@types/react-lazy-load-image-component": "^1.5.1",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
     "conventional-changelog-cli": "^2.1.1",
@@ -76,6 +78,7 @@
       "jsx-a11y"
     ],
     "rules": {
+      "camelcase": "off",
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
       "react/jsx-filename-extension": [
