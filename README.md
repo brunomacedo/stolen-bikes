@@ -4,11 +4,14 @@
   </a>
 </p>
 
-# Stolen Bike Index
+<h1 align="center">Stolen Bike Index</h1>
 
 <p align="center">
-  <a href="#" target="_blank">
-    <img src="https://img.shields.io/badge/-preview-red" />
+  <a href="https://stolen-bikes-index.herokuapp.com/" target="_blank">
+    <img src="https://img.shields.io/badge/-development-red" />
+  </a>
+  <a href="https://stolen-bikes-index-app.herokuapp.com/" target="_blank">
+    <img src="https://img.shields.io/badge/-production-purple" />
   </a>
   <a href="#setup">
     <img src="https://img.shields.io/badge/-documentation-blue" />
