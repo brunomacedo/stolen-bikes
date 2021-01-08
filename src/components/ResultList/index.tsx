@@ -9,6 +9,13 @@ export default function ResultList({ list }: any) {
 
   return (
     <>
+      <form>
+        <input type="text" placeholder="Search case descriptions" />
+        <input type="date" placeholder="From" />
+        <input type="date" placeholder="To" />
+        <button type="submit">Find cases</button>
+      </form>
+
       <ul>
         {list.map((item: IntIncident) => (
           item && (
