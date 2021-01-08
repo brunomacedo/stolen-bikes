@@ -10,22 +10,26 @@ export default function SearchForm() {
 
   return (
     <S.Form>
-      <input type="text" placeholder="Search case descriptions" />
+      <input name="query" type="text" placeholder="Search case descriptions" />
       <DatePicker
-        name="dateFrom"
+        name="occurred_before"
         placeholderText="from"
         dateFormat="dd/MM/yyyy"
         onChange={(value: Date) => setDateFrom(value)}
         selected={new Date(dateFrom)}
       />
       <DatePicker
-        name="dateTo"
+        name="occurred_after"
         placeholderText="from"
         dateFormat="dd/MM/yyyy"
         onChange={(value: Date) => setDateTo(value)}
         selected={dateTo}
       />
-      <S.Button type="submit">Find cases</S.Button>
+      <S.Button
+        type="submit"
+      >
+        Find cases
+      </S.Button>
     </S.Form>
   );
 }
