@@ -10,7 +10,7 @@ export function resquestAllIncidents(params: object) {
 
 export function resquestIncidentDetail(id: string) {
   return APIResquest({
-    uri: `incidents/:${id}`,
+    uri: `incidents/${id}`,
     method: 'GET',
   });
 }

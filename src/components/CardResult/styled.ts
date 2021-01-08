@@ -1,16 +1,26 @@
+import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { colors } from '../../styles/variables';
+import { colors, screen } from '../../styles/variables';
 
-interface Props {
+interface PropsStatus {
   type?: string;
 }
 
+interface PropsWrapper {
+  children?: ReactNode;
+}
+
 export const Card = styled.li`
-  padding: 1.6rem 0;
+  padding: 1.6rem 0.5rem;
   font-weight: 300;
 
   & + li {
     border-top: 1px solid ${colors.grey};
+  }
+
+  &:hover {
+    background-color: ${colors.grey};
   }
 `;
 
@@ -26,15 +36,38 @@ export const CardFigure = styled.figure`
     width: 100%;
     height: 100%;
   }
+
+  @media screen and (max-width: ${screen.xs}) {
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    margin: 0 0 0.5rem;
+  }
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.div<PropsWrapper>`
   display: flex;
   align-items: center;
   position: relative;
 
   & h3 {
     color: ${colors.darkBiege};
+  }
+
+  @media screen and (max-width: ${screen.xs}) {
+    display: block;
+  }
+`;
+
+export const CardTitleLink = styled(Link) <PropsWrapper>`
+  color: ${colors.darkBiege};
+  font-weight: bold;
+  font-size: 18px;
+
+  &:hover {
+    color: ${colors.xanadu};
   }
 `;
 
@@ -44,7 +77,7 @@ export const CardDateTime = styled.p`
   margin-bottom: 0.3rem;
 `;
 
-export const CardStatus = styled.span<Props>`
+export const CardStatus = styled.span<PropsStatus>`
   background-color: ${(props: any) => checkStatusColor(props?.type)};
   color: white;
   font-size: 12px;
@@ -55,9 +88,13 @@ export const CardStatus = styled.span<Props>`
 `;
 
 export const CardText = styled.div`
-  padding-left: 1.5rem;
   flex: 1;
   line-height: 1.4;
+  padding-left: 1.5rem;
+
+  @media screen and (max-width: ${screen.xs}) {
+    padding-left: 0;
+  }
 `;
 
 const checkStatusColor = (type: string) => {

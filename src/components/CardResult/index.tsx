@@ -1,5 +1,6 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 import bicycleImage from '../../assets/images/bicycle.svg';
 import { IntIncident } from '../../interfaces/incident';
 import * as S from './styled';
@@ -17,20 +18,26 @@ export default function CardResult(props: IntIncident) {
   } = props;
 
   return (
-    <S.Card key={id}>
+    <S.Card key={`${id}`}>
       <S.CardWrapper>
-        <S.CardFigure>
-          <LazyLoadImage
-            alt={title}
-            src={
-              media?.image_url_thumb
-                ? media?.image_url_thumb
-                : bicycleImage
-            }
-          />
-        </S.CardFigure>
+        <Link to={`/incidents/${id}`}>
+          <S.CardFigure>
+            <LazyLoadImage
+              alt={title}
+              src={
+                media?.image_url_thumb
+                  ? media?.image_url_thumb
+                  : bicycleImage
+              }
+            />
+          </S.CardFigure>
+        </Link>
         <S.CardText>
-          {title && <h3>{title.replace('- LINK', '')}</h3>}
+          {title && (
+            <S.CardTitleLink to={`/incidents/${id}`}>
+              {title.replace('- LINK', '')}
+            </S.CardTitleLink>
+          )}
 
           {(occurred_at || updated_at) && (
             <S.CardDateTime>
