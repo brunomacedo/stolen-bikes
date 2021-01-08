@@ -1,3 +1,20 @@
+# [0.5.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.4.0...v0.5.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* router cases ([277d3fc](https://github.com/brunomacedo/stolen-bikes/commit/277d3fc23a75e5cc7814865b141a43c5f149daa6))
+
+
+### Features
+
+* add context api to filter items ([747c220](https://github.com/brunomacedo/stolen-bikes/commit/747c2208ad381e060ffe4d3f27d41d32c4b69396))
+* add datepicker and config css ([cb5fab8](https://github.com/brunomacedo/stolen-bikes/commit/cb5fab8bb8e316ce433636dcef7a1d2d50ec14d4))
+* search form by query ([9d2f714](https://github.com/brunomacedo/stolen-bikes/commit/9d2f7146d16725662aac5ffe881a17ec14211b02))
+* style search form ([5f040e8](https://github.com/brunomacedo/stolen-bikes/commit/5f040e83750d1475b22700c932215262e3f118b9))
+
+
+
 # [0.4.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.3.0...v0.4.0) (2021-01-08)
 
 
