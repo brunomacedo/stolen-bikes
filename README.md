@@ -69,6 +69,13 @@ Run the command below from this root path
 yarn or npm install
 ```
 
+### Run local
+
+```terminal
+yarn dev or npm dev
+```
+
+
 <br>
 
 ---
