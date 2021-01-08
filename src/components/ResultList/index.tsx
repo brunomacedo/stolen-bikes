@@ -1,6 +1,7 @@
 import { IntIncident } from '../../interfaces/incident';
 import Loading from '../Loading';
 import CardResult from '../CardResult';
+import * as S from './styled';
 
 export default function ResultList({ list }: any) {
   if (list.length === 0) {
@@ -9,12 +10,12 @@ export default function ResultList({ list }: any) {
 
   return (
     <>
-      <form>
-        <input type="text" placeholder="Search case descriptions" />
-        <input type="date" placeholder="From" />
-        <input type="date" placeholder="To" />
-        <button type="submit">Find cases</button>
-      </form>
+      <S.Form>
+        <S.Input type="text" placeholder="Search case descriptions" />
+        <S.Input type="date" placeholder="From" />
+        <S.Input type="date" placeholder="To" />
+        <S.Button type="submit">Find cases</S.Button>
+      </S.Form>
 
       <ul>
         {list.map((item: IntIncident) => (
