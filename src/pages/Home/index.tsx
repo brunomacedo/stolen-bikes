@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { resquestAllIncidents } from '../../actions';
 import MasterPage from '../../components/MasterPage';
+import SearchForm from '../../components/SearchForm';
 import ResultList from '../../components/ResultList';
 
 export default function Home(props: object) {
@@ -32,6 +33,7 @@ export default function Home(props: object) {
 
   return (
     <MasterPage>
+      <SearchForm />
       <ResultList list={allIncidents} />
     </MasterPage>
   );

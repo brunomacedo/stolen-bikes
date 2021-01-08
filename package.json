@@ -19,6 +19,7 @@
     "moment": "^2.29.1",
     "path": "^0.12.7",
     "react": "^17.0.1",
+    "react-datepicker": "^3.3.0",
     "react-dom": "^17.0.1",
     "react-lazy-load-image-component": "^1.5.1",
     "react-router-dom": "^5.2.0",
@@ -29,6 +30,7 @@
     "web-vitals": "^0.2.4"
   },
   "devDependencies": {
+    "@types/react-datepicker": "^3.1.2",
     "@types/react-lazy-load-image-component": "^1.5.1",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
