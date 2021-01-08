@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { resquestIncidentDetail } from '../../actions';
+import Loading from '../../components/Loading';
 import MasterPage from '../../components/MasterPage';
 import { IntIncident } from '../../interfaces/incident';
 
@@ -34,7 +35,11 @@ export default function Details() {
 
   return (
     <MasterPage>
-      <h1>{incidentDetail.title}</h1>
+      {Object.keys(incidentDetail).length === 0 ? (
+        <Loading />
+      ) : (
+        <h1>{incidentDetail.title}</h1>
+      )}
     </MasterPage>
   );
 }

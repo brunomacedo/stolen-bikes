@@ -1,9 +1,10 @@
 import { IntIncident } from '../../interfaces/incident';
+import Loading from '../Loading';
 import CardResult from '../CardResult';
 
 export default function ResultList({ list }: any) {
   if (list.length === 0) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (
