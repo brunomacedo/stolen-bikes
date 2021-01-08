@@ -64,6 +64,7 @@ export const Description = styled.p`
 export const CardFigure = styled.figure`
   width: 100%;
   max-width: 25rem;
+  min-height: 16rem;
   border: 3px solid ${colors.darkBiege};
   overflow: hidden;
   object-fit: fill;

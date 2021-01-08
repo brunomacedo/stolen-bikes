@@ -1,3 +1,15 @@
+# [0.4.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.3.0...v0.4.0) (2021-01-08)
+
+
+### Features
+
+* call to google map iframe ([a5584c2](https://github.com/brunomacedo/stolen-bikes/commit/a5584c202cff1b5e65279d3ff73533d1f9ff97ce))
+* cards layout list ([bea8e87](https://github.com/brunomacedo/stolen-bikes/commit/bea8e870abc80965f21863a5f5e18c8798c47516))
+* create datail page ([4aeea38](https://github.com/brunomacedo/stolen-bikes/commit/4aeea389f5fce736550f8d19327a4a70fa2505d1))
+* create loading component ([a8ee7cc](https://github.com/brunomacedo/stolen-bikes/commit/a8ee7cc36096c542415e25fa2df6354c3134de61))
+
+
+
 # [0.3.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.2.0...v0.3.0) (2021-01-07)
 
 

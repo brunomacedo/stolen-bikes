@@ -14,6 +14,7 @@ interface PropsWrapper {
 export const Card = styled.li`
   padding: 1.6rem 0.5rem;
   font-weight: 300;
+  cursor: pointer;
 
   & + li {
     border-top: 1px solid ${colors.grey};

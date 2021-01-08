@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './variables';
 
 const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -30,6 +31,9 @@ const GlobalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
   }
+  input {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
   blockquote, q {
     quotes: none;
   }
@@ -59,6 +63,68 @@ const GlobalStyles = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  .react-datepicker__triangle {
+    border-bottom-color: white !important;
+  }
+  .react-datepicker__navigation--next,
+  .react-datepicker__navigation--previous {
+    top: 12px;
+    outline: none;
+  }
+  .react-datepicker__navigation--next {
+    border-left-color: black;
+  }
+  .react-datepicker__navigation--previous {
+    border-right-color: black;
+  }
+  .react-datepicker__day {
+    width: 2rem;
+    line-height: 1.5rem;
+  }
+  .react-datepicker__day-name {
+    width: 2rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: ${colors.darkBiege};
+  }
+  .react-datepicker__current-month,
+  .react-datepicker-time__header,
+  .react-datepicker-year-header,
+  .react-datepicker__day {
+    font-size: 0.8rem;
+  }
+  .react-datepicker__current-month {
+    padding: 3px 0 10px;
+    border-bottom: 1px solid ${colors.grey};
+  }
+  .react-datepicker__header {
+    background-color: white;
+    border: none;
+  }
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    color: white !important;
+    background-color: ${colors.darkBiege} !important;
+    font-weight: 300;
+  }
+  .react-datepicker__day-names {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    font-weight: 400;
+  }
+  .react-datepicker__week .react-datepicker__day {
+    &:hover {
+      background-color: ${colors.darkBiege};
+      color: white;
+    }
+    &.react-datepicker__day--today {
+      color: black;
+    }
+    &.react-datepicker__day--disabled {
+      color: ${colors.grey};
+      cursor: not-allowed;
+    }
   }
 `;
 

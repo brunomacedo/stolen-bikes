@@ -14,7 +14,7 @@ const Routes = [
     component: PageNotFound,
   },
   {
-    path: '/incidents/:id',
+    path: '/case/:id',
     active: true,
     component: Details,
   },

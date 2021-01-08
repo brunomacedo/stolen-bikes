@@ -20,7 +20,7 @@ export default function CardResult(props: IntIncident) {
   return (
     <S.Card key={`${id}`}>
       <S.CardWrapper>
-        <Link to={`/incidents/${id}`}>
+        <Link to={`/case/${id}`}>
           <S.CardFigure>
             <LazyLoadImage
               alt={title}
@@ -34,7 +34,7 @@ export default function CardResult(props: IntIncident) {
         </Link>
         <S.CardText>
           {title && (
-            <S.CardTitleLink to={`/incidents/${id}`}>
+            <S.CardTitleLink to={`/case/${id}`}>
               {title.replace('- LINK', '')}
             </S.CardTitleLink>
           )}
