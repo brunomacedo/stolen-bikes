@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#" target="_blank">
+  <a href="https://stolen-bikes-index.herokuapp.com/" target="_blank">
     <img src="_docs/berliner_polizei.svg" width="120" />
   </a>
 </p>
@@ -38,6 +38,11 @@
 - node >=14
 - npm >=6
 - vscode (include extensions)
+
+### vscode extension
+
+- ESLint
+- Prettier
 
 <br>
 
@@ -79,21 +84,4 @@ Run the command below from this root path
 
 ```terminal
 yarn test or npm test
-```
-
-<br>
-
----
-
-<br>
-<a name="deploy"></a>
-
-## **Deploy**
-
-### Deploy this project to production
-
-Run the command below from this root path
-
-```terminal
-yarn deploy or npm run deploy
 ```
