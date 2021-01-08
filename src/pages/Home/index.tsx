@@ -1,20 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react';
 import axios from 'axios';
-// import { useLocation } from 'react-router-dom';
 import { resquestAllIncidents } from '../../actions';
+import AppContext from '../../context/App';
 import MasterPage from '../../components/MasterPage';
 import SearchForm from '../../components/SearchForm';
 import ResultList from '../../components/ResultList';
 
 export default function Home() {
-  // const params: { search: string } = useLocation();
   const { CancelToken } = axios;
   const source = CancelToken.source();
 
-  const [allIncidents, setIncidents] = useState([]);
-
-  // const urlParams = new URLSearchParams(params?.search);
-  // const occurred_before: string = urlParams?.get('occurred_before');
+  const { allIncidents, updateIncidents } = useContext(AppContext);
 
   const getAllIncidents = async () => {
     try {
@@ -26,7 +22,7 @@ export default function Home() {
         occurred_after: '',
       });
 
-      setIncidents(incidents);
+      updateIncidents(incidents);
     } catch (error) {
       if (!axios.isCancel(error)) {
         // eslint-disable-next-line no-console
