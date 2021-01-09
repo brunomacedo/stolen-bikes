@@ -19,13 +19,12 @@
   <a href="#tests">
     <img src="https://img.shields.io/badge/-tests-yellow" />
   </a>
-  <a href="#deploy">
-    <img src="https://img.shields.io/badge/-deploy-green" />
-  </a>
   <a href="CHANGELOG.md" target="_blank">
     <img src="https://img.shields.io/badge/-changelog-grey" />
   </a>
 </p>
+
+This project has developed using React, TypeScript, Styled-Components and ESLint.
 
 <br>
 
@@ -51,7 +50,7 @@
 <br>
 <a name="setup"></a>
 
-## **Inital setup**
+## **Initial setup**
 
 ### Create `.env` file
 
@@ -68,6 +67,13 @@ Run the command below from this root path
 ```terminal
 yarn or npm install
 ```
+
+### Run local
+
+```terminal
+yarn dev or npm dev
+```
+
 
 <br>
 
