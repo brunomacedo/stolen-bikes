@@ -24,11 +24,11 @@
   </a>
 </p>
 
-This project has developed using React, TypeScript, Styled-Components and ESLint.
+This project has developed using React, TypeScript, Styled-Components, ESLint and follow the Git Flow praticses.
 
 <br>
 
----
+![Mobile-GIF](_docs/stolen-bykes.gif)
 
 <br>
 
