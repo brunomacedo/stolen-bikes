@@ -1,7 +1,7 @@
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import { useContext } from 'react';
-import moment from 'moment';
+// import moment from 'moment';
 import AppContext from '../../context/App';
 import * as S from './styled';
 
@@ -18,8 +18,8 @@ export default function SearchForm() {
     try {
       const { incidents } = await resquestAllIncidents({
         page: 1,
-        occurred_before: moment(search.dateFrom).unix(),
-        occurred_after: moment(search.dateTo).unix(),
+        // occurred_before: moment(search.dateFrom).unix(),
+        // occurred_after: moment(search.dateTo).unix(),
         incident_type: 'theft',
         per_page: 10,
         query: search.input,

@@ -71,7 +71,7 @@ yarn or npm install
 ### Run local
 
 ```terminal
-yarn dev or npm dev
+yarn dev or npm run dev
 ```
 
 
