@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/brunomacedo/stolen-bikes/compare/v0.6.0...v0.6.1) (2021-01-12)
+
+
+### Bug Fixes
+
+* filter by date range ([0ee20b5](https://github.com/brunomacedo/stolen-bikes/commit/0ee20b5b983a1915aae02817836d9908d44faff2))
+
+
+
 # [0.6.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.5.1...v0.6.0) (2021-01-12)
 
 
