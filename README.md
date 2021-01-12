@@ -116,7 +116,7 @@ As a police officer:
 - [X] I want to see a list of reported bike thefts for the Berlin area.
 - [X] I want to see the first 10 bike theft cases, with the ability to - paginate (10 cases per page).
 - [X] I want to see a total number of bike theft cases.
-- [ ] For each reported bike theft I want to see:
+- [X] For each reported bike theft I want to see:
   - [X] Case title
   - [X] Case description
   - [X] Date of the theft
