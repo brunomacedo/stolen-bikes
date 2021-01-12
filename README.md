@@ -14,12 +14,9 @@
     <img src="https://img.shields.io/badge/-production-purple" />
   </a>
   <a href="#setup">
-    <img src="https://img.shields.io/badge/-documentation-blue" />
+    <img src="https://img.shields.io/badge/-setup-blue" />
   </a>
-  <a href="#tests">
-    <img src="https://img.shields.io/badge/-tests-yellow" />
-  </a>
-  <a href="CHANGELOG.md" target="_blank">
+  <a href="#changelog" target="_blank">
     <img src="https://img.shields.io/badge/-changelog-grey" />
   </a>
 </p>
@@ -28,9 +25,19 @@ This project has developed using React, TypeScript, Styled-Components, ESLint an
 
 <br>
 
-![Mobile-GIF](_docs/stolen-bykes.gif)
+<!-- ![Mobile-GIF](_docs/stolen-bykes.gif) -->
+
+
+# <img src="_docs/berliner_polizei.svg" width="20" valign="middle" /> **Table content**
+
+- Develop Requirements [[click here]](#requirements)
+- Setup (*Install and configure*) [[click here]](#setup)
+- Development (*Commands*) [[click here]](#development)
+- Changelog [[click here]](#changelog)
+- Product Requirements [[click here]](#todo)
 
 <br>
+<a name="requirements"></a>
 
 ## **Requirements to development**
 
@@ -42,10 +49,6 @@ This project has developed using React, TypeScript, Styled-Components, ESLint an
 
 - ESLint
 - Prettier
-
-<br>
-
----
 
 <br>
 <a name="setup"></a>
@@ -68,7 +71,14 @@ Run the command below from this root path
 yarn or npm install
 ```
 
-### Run local
+
+<br>
+<a name="development"></a>
+
+## **Development** (*Run local commands*)
+[https://localhost:4000/](https://localhost:4000/)
+
+#### Run server
 
 ```terminal
 yarn dev or npm run dev
@@ -76,18 +86,45 @@ yarn dev or npm run dev
 
 
 <br>
+<a name="changelog"></a>
 
----
+## Changelog [[click here]](CHANGELOG.md)
+
+Based on Conventional Changelog [[here]](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
+
+### How it works?
+
+If this is your first time using this tool and you want to generate all previous changelogs, you could do
+
+```
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+```
+
+This will overwrite any previous changelogs if they exist.
+
+All available command line parameters can be listed using CLI: `conventional-changelog --help`.
+
+**Hint:** You can alias your command or add it to your package.json. EG: `"changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"`.
 
 <br>
-<a name="tests"></a>
+<a name="todo"></a>
 
-## **Test**
+## **Product Requirements**
 
-### Run local tests
+As a police officer:
 
-Run the command below from this root path
-
-```terminal
-yarn test or npm test
-```
+- [X] I want to see a list of reported bike thefts for the Berlin area.
+- [X] I want to see the first 10 bike theft cases, with the ability to - paginate (10 cases per page).
+- [X] I want to see a total number of bike theft cases.
+- [X] For each reported bike theft I want to see:
+  - [X] Case title
+  - [X] Case description
+  - [X] Date of the theft
+  - [X] Date of when the case was reported
+  - [X] Location of the theft
+  - [X] Picture of the bike, if available
+- [X] I want to filter reported bike thefts by partial case title.
+- [ ] I want to filter reported bike thefts by date range.
+- [X] I want to see a loading state until the list is available.
+- [ ] I want to see an error state if the list is unavailable.
+- [X] I want to see an empty state if there are no results.
