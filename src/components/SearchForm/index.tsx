@@ -1,7 +1,7 @@
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import { useContext } from 'react';
-// import moment from 'moment';
+import moment from 'moment';
 import AppContext from '../../context/App';
 import * as S from './styled';
 
@@ -17,10 +17,10 @@ export default function SearchForm() {
   const getAllIncidents = async () => {
     try {
       const { incidents } = await resquestAllIncidents({
-        page: 1,
-        // occurred_before: moment(search.dateFrom).unix(),
-        // occurred_after: moment(search.dateTo).unix(),
+        occurred_before: moment(search.dateTo).unix(),
+        occurred_after: moment(search.dateFrom).unix(),
         incident_type: 'theft',
+        page: 1,
         per_page: 10,
         query: search.input,
       });
@@ -58,7 +58,7 @@ export default function SearchForm() {
       <DatePicker
         name="occurred_before"
         placeholderText="from"
-        dateFormat="dd/MM/yyyy"
+        dateFormat="MM/dd/yyyy"
         selected={search.dateFrom}
         onChange={(value: Date) => setSearch({
           ...search,
@@ -68,7 +68,7 @@ export default function SearchForm() {
       <DatePicker
         name="occurred_after"
         placeholderText="to"
-        dateFormat="dd/MM/yyyy"
+        dateFormat="MM/dd/yyyy"
         selected={search.dateTo}
         onChange={(value: Date) => setSearch({
           ...search,
