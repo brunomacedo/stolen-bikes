@@ -1,5 +1,4 @@
 import { IntIncident } from '../../interfaces/incident';
-import Loading from '../Loading';
 import CardResult from '../CardResult';
 import * as S from './styled';
 
@@ -7,7 +6,7 @@ export default function ResultList({ list }: any) {
   return (
     <>
       {list.length === 0 ? (
-        <Loading />
+        <p>No results</p>
       ) : (
         <>
           <S.TotalCount>
