@@ -1,3 +1,18 @@
+# [0.6.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.5.1...v0.6.0) (2021-01-12)
+
+
+### Bug Fixes
+
+* loading and add when get empty results ([6c1def0](https://github.com/brunomacedo/stolen-bikes/commit/6c1def0e7a9c74c3a913ca8a515ef2b90609c9d9))
+
+
+### Features
+
+* add global variable ([b4285a5](https://github.com/brunomacedo/stolen-bikes/commit/b4285a50946733259947cc25e0c1307150f85380))
+* add styled pagination ([60579f4](https://github.com/brunomacedo/stolen-bikes/commit/60579f4c62f63c775d8141cb292511e7fdd266f2))
+
+
+
 ## [0.5.1](https://github.com/brunomacedo/stolen-bikes/compare/v0.5.0...v0.5.1) (2021-01-12)
 
 

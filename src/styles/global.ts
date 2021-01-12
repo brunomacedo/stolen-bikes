@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from './variables';
+import { colors, screen } from './variables';
 
 const GlobalStyles = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -124,6 +124,58 @@ const GlobalStyles = createGlobalStyle`
     &.react-datepicker__day--disabled {
       color: ${colors.grey};
       cursor: not-allowed;
+    }
+  }
+  .list-pagination {
+    list-style: none;
+    width: 100%;
+    display: block;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: #333;
+      text-decoration: none;
+
+      &.disabled {
+        display: none;
+      }
+
+      & + li {
+        margin-left: 5px;
+
+        @media screen and (max-width: ${screen.sm}) {
+          margin-left: 0px;
+        }
+      }
+    }
+    &--link {
+      padding: 5px 12px;
+      text-decoration: none;
+      color: black;
+      font-weight: 400;
+
+      @media screen and (max-width: ${screen.sm}) {
+        padding: 5px 8px;
+      }
+
+      &:hover {
+        background-color: ${colors.darkBiege};
+        color: white;
+      }
+    }
+
+    &--active {
+      background-color: ${colors.darkBiege};
+      color: white;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
     }
   }
 `;

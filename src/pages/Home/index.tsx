@@ -6,8 +6,7 @@ import AppContext from '../../context/App';
 import MasterPage from '../../components/MasterPage';
 import SearchForm from '../../components/SearchForm';
 import ResultList from '../../components/ResultList';
-
-import './styled.scss';
+import Loading from '../../components/Loading';
 
 export default function Home() {
   const { CancelToken } = axios;
@@ -15,6 +14,7 @@ export default function Home() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const { allIncidents, updateIncidents } = useContext(AppContext);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getAllIncidents = async (page: number) => {
     try {
@@ -27,10 +27,11 @@ export default function Home() {
       });
 
       updateIncidents(incidents);
+      setIsLoading(false);
     } catch (error) {
       if (!axios.isCancel(error)) {
         // eslint-disable-next-line no-console
-        console.log('Cancel loading...');
+        console.log('Oops, something went wrong');
       }
     }
   };
@@ -38,6 +39,7 @@ export default function Home() {
   const onHandlePageChange = async (page: number) => {
     setCurrentPage(page);
     await getAllIncidents(page);
+    window.scrollTo({ behavior: 'smooth', top: 0 });
   };
 
   useEffect(() => {
@@ -46,28 +48,34 @@ export default function Home() {
     return () => {
       source.cancel('Operation canceled by the user.');
     };
-  }, []);
+  }, [isLoading]);
 
   return (
     <MasterPage>
       <SearchForm />
-      <ResultList list={allIncidents} />
-
-      {allIncidents.length > 0 && (
-        <Pagination
-          firstPageText="<< First"
-          prevPageText="< Prev"
-          nextPageText="Next >"
-          lastPageText="Last >>"
-          innerClass="list-pagination"
-          linkClass="list-pagination--link"
-          activeLinkClass="list-pagination--active"
-          activePage={currentPage}
-          totalItemsCount={100}
-          pageRangeDisplayed={3}
-          onChange={(page: number) => onHandlePageChange(page)}
-        />
+      {!isLoading ? (
+        <>
+          <ResultList list={allIncidents} />
+          {allIncidents.length > 0 && (
+          <Pagination
+            firstPageText="<< First"
+            prevPageText="< Prev"
+            nextPageText="Next >"
+            lastPageText="Last >>"
+            innerClass="list-pagination"
+            linkClass="list-pagination--link"
+            activeLinkClass="list-pagination--active"
+            activePage={currentPage}
+            totalItemsCount={100}
+            pageRangeDisplayed={3}
+            onChange={(page: number) => onHandlePageChange(page)}
+          />
+          )}
+        </>
+      ) : (
+        <Loading />
       )}
+
     </MasterPage>
   );
 }
