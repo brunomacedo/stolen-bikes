@@ -123,7 +123,7 @@ As a police officer:
   - [X] Date of when the case was reported
   - [X] Location of the theft
   - [X] Picture of the bike, if available
-- [ ] I want to filter reported bike thefts by partial case title.
+- [X] I want to filter reported bike thefts by partial case title.
 - [ ] I want to filter reported bike thefts by date range.
 - [X] I want to see a loading state until the list is available.
 - [ ] I want to see an error state if the list is unavailable.
