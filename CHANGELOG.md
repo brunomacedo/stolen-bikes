@@ -1,3 +1,17 @@
+## [0.5.1](https://github.com/brunomacedo/stolen-bikes/compare/v0.5.0...v0.5.1) (2021-01-12)
+
+
+### Bug Fixes
+
+* search result ([56b5f9f](https://github.com/brunomacedo/stolen-bikes/commit/56b5f9fdb0b59fa4b9c795770ba865b675870c7c))
+
+
+### Features
+
+* add pagination on home ([9429118](https://github.com/brunomacedo/stolen-bikes/commit/9429118025716f8bbbf33bb8bda4c1f7196d62d8))
+
+
+
 # [0.5.0](https://github.com/brunomacedo/stolen-bikes/compare/v0.4.0...v0.5.0) (2021-01-08)
 
 
