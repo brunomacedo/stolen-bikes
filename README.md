@@ -7,6 +7,7 @@
 <h1 align="center">Stolen Bike Index</h1>
 
 <p align="center">
+  <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/brunomacedo/stolen-bikes">
   <a href="https://stolen-bikes-index.herokuapp.com/" target="_blank">
     <img src="https://img.shields.io/badge/-development-red" />
   </a>
