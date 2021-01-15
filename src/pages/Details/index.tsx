@@ -3,14 +3,13 @@ import axios from 'axios';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { REACT_APP_GOOGLE_KEY } from '../../config';
 import { resquestIncidentDetail } from '../../actions';
 import Loading from '../../components/Loading';
 import MasterPage from '../../components/MasterPage';
 import { IntIncident } from '../../interfaces/incident';
 import bicycleImage from '../../assets/images/bicycle.svg';
 import * as S from './styled';
-
-const GOOGLE_KEY = 'AIzaSyDqBA8vpdp6l470wo2wXQROAuLY5ELRm64';
 
 export default function Details() {
   const params: { id: string } = useParams();
@@ -81,7 +80,7 @@ export default function Details() {
               <S.GoogleMap>
                 <iframe
                   title="Google Maps"
-                  src={`https://www.google.com/maps/embed/v1/search?key=${GOOGLE_KEY}&q=${incidentDetail.address}`}
+                  src={`https://www.google.com/maps/embed/v1/search?key=${REACT_APP_GOOGLE_KEY}&q=${incidentDetail.address}`}
                   width="100%"
                   height="100%"
                   frameBorder="0"

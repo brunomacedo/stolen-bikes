@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import axios from 'axios';
 import Pagination from 'react-js-pagination';
 import { resquestAllIncidents } from '../../actions';

@@ -27,12 +27,11 @@ This project has developed using React, TypeScript, Styled-Components, ESLint an
 
 <!-- ![Mobile-GIF](_docs/stolen-bykes.gif) -->
 
-
 # <img src="_docs/berliner_polizei.svg" width="20" valign="middle" /> **Table content**
 
 - Develop Requirements [[click here]](#requirements)
-- Setup (*Install and configure*) [[click here]](#setup)
-- Development (*Commands*) [[click here]](#development)
+- Setup (_Install and configure_) [[click here]](#setup)
+- Development (_Commands_) [[click here]](#development)
 - Changelog [[click here]](#changelog)
 - Product Requirements [[click here]](#todo)
 
@@ -58,9 +57,10 @@ This project has developed using React, TypeScript, Styled-Components, ESLint an
 ### Create `.env` file
 
 ```bash
-FAST_REFRESH=false
+FAST_REFRESH=false # if Windows
 PORT=3001
 REACT_APP_BIKE_API=https://bikewise.org/api/v2
+REACT_APP_GOOGLE_KEY=REPLACE_YOUR_KEY_HERE
 ```
 
 ### Install packages dependencies
@@ -71,11 +71,11 @@ Run the command below from this root path
 yarn or npm install
 ```
 
-
 <br>
 <a name="development"></a>
 
-## **Development** (*Run local commands*)
+## **Development** (_Run local commands_)
+
 [https://localhost:4000/](https://localhost:4000/)
 
 #### Run server
@@ -83,7 +83,6 @@ yarn or npm install
 ```terminal
 yarn dev or npm run dev
 ```
-
 
 <br>
 <a name="changelog"></a>
@@ -113,18 +112,18 @@ All available command line parameters can be listed using CLI: `conventional-cha
 
 As a police officer:
 
-- [X] I want to see a list of reported bike thefts for the Berlin area.
-- [X] I want to see the first 10 bike theft cases, with the ability to - paginate (10 cases per page).
-- [X] I want to see a total number of bike theft cases.
-- [X] For each reported bike theft I want to see:
-  - [X] Case title
-  - [X] Case description
-  - [X] Date of the theft
-  - [X] Date of when the case was reported
-  - [X] Location of the theft
-  - [X] Picture of the bike, if available
-- [X] I want to filter reported bike thefts by partial case title.
-- [X] I want to filter reported bike thefts by date range.
-- [X] I want to see a loading state until the list is available.
+- [x] I want to see a list of reported bike thefts for the Berlin area.
+- [x] I want to see the first 10 bike theft cases, with the ability to - paginate (10 cases per page).
+- [x] I want to see a total number of bike theft cases.
+- [x] For each reported bike theft I want to see:
+  - [x] Case title
+  - [x] Case description
+  - [x] Date of the theft
+  - [x] Date of when the case was reported
+  - [x] Location of the theft
+  - [x] Picture of the bike, if available
+- [x] I want to filter reported bike thefts by partial case title.
+- [x] I want to filter reported bike thefts by date range.
+- [x] I want to see a loading state until the list is available.
 - [ ] I want to see an error state if the list is unavailable.
-- [X] I want to see an empty state if there are no results.
+- [x] I want to see an empty state if there are no results.
