@@ -1,3 +1,12 @@
+## [0.6.2](https://github.com/brunomacedo/stolen-bikes/compare/v0.6.1...v0.6.2) (2021-01-15)
+
+
+### Bug Fixes
+
+* google key to environment ([d6aaa18](https://github.com/brunomacedo/stolen-bikes/commit/d6aaa18f12b03e55615e0fe7c167862ad080206e))
+
+
+
 ## [0.6.1](https://github.com/brunomacedo/stolen-bikes/compare/v0.6.0...v0.6.1) (2021-01-12)
 
 
