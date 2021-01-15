@@ -1,6 +1,6 @@
 {
   "name": "stolen-bikes",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "author": "Bruno Macedo <contato@brunomacedo.com.br> (https://brunomacedo.com.br/)",
   "dependencies": {
