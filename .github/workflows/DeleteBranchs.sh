@@ -19,7 +19,7 @@ delete_merged_branches() {
   echo
 
   # Fetch all branches and prune deleted ones
-  git fetch --prune --no-tags || { echo "Error fetching branches"; exit 1; }
+  git fetch --prune --no-tags > /dev/null 2>&1 || { echo "Error fetching branches"; exit 1; }
 
   # Determine the default branch dynamically
   default_branch=$(git remote show origin | grep 'HEAD branch' | awk '{print $NF}')
