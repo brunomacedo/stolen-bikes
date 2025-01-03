@@ -1,0 +1,19 @@
+name: Delete Branches
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *" # Runs at midnight on the first day of each month
+
+jobs:
+  clean-up:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete merged or stale branches
+        run: bash DeleteBranchs.sh --list
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
