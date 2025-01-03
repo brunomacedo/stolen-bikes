@@ -40,6 +40,12 @@ delete_merged_branches() {
   fi
 
   for branch_name in $branches; do
+    # Skip the default branch
+    if [ "$branch_name" = "$default_branch" ]; then
+      echo "Skipping default branch: $branch_name"
+      continue
+    fi
+
     # Check if the branch is protected
     if git config --get branch."$branch_name".protected > /dev/null 2>&1; then
       echo "Skipping protected branch: $branch_name"
