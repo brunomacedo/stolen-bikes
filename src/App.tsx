@@ -2,6 +2,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import PageNotFound from './pages/404';
 import Home from './pages/Home';
 
+/**
+ * App default component
+ */
 function App() {
   return (
     <BrowserRouter>

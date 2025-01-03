@@ -1,0 +1,28 @@
+name: Delete Branches
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Choose the environment'
+        default: 'list'
+        required: true
+        type: choice
+        options:
+        - delete
+        - list
+  schedule:
+    - cron: "0 0 1 * *" # Runs at midnight on the first day of each month
+
+jobs:
+  clean-up:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Delete merged or stale branches
+        run: bash .github/workflows/DeleteBranchs.sh --${{ github.event.inputs.environment }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
